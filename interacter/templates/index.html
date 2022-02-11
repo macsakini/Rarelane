@@ -1,0 +1,63 @@
+{% include "header.html" %}
+    <div class="container hero">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h1 class="text-center">RareLane Consultants</h1>
+            </div>
+        </div>
+    </div>
+{% include "navend.html"%}
+    <div id = "aboutus">
+        <div id = "aboutush">
+            <h1>About Us</h1>
+        </div>
+        <div id = "aboutusp">
+            <span>
+                This is a discussion of some of the risks faced in the banking industry. 
+                It pursues the 2020 annual report published by Bank of America and, using critical financial metrics and risk factors, expounds on the sources of risk, calculation methods, and management strategies the bank operates.
+                It also deep dives into operational risk, which many financial institutions experience a hard time assessing and analyzing. 
+                A key point to note is the framework assessment with constructed maint6aing the dynamic regulations affecting the banking industry in the United States. 
+            </span>
+        </div>
+    </div>
+
+
+    <div id="sectionsplit">
+        <div id="sectionsplit1">
+            <div id = "aboutush">
+                <h1>Book your Appointment</h1>
+            </div>
+            <div class="registerdash">    
+                <form id="login" method="POST" action="/login">    
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="Submit">
+                </form>
+            </div> 
+        </div>
+        <div id="sectionsplit2">
+            <div id = "aboutush">
+                <h1>Request Information</h1>
+            </div>
+            <div id = "aboutusp">
+                <span>
+                    This is a discussion of some of the risks faced in the banking industry. 
+                    It pursues the 2020 annual report published by Bank of America and, using critical financial metrics and risk factors, expounds on the sources of risk, calculation methods, and management strategies the bank operates.
+                    It also deep dives into operational risk, which many financial institutions experience a hard time assessing and analyzing. 
+                    A key point to note is the framework assessment with constructed maint6aing the dynamic regulations affecting the banking industry in the United States. 
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div id = "aboutus">
+        <div id = "aboutush">
+        </div>
+    </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="http://interact.dummyprojects.xyz/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+
+{% include "footer.html"%}

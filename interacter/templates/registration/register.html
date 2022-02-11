@@ -1,0 +1,54 @@
+
+{% include "header.html"%}
+
+<h2>Register your Interact ID</h2>
+
+{% include "navend.html"%}
+    <div class="registerdash">    
+    <form id="register" method="POST" action="/register">    
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+        <input type="checkbox" id="check">    
+        <span>Remember me</span>    
+        <br><br>
+        <p>Already have an Account? <a>Login</a></p>
+    </form>     
+</div>   
+<style>
+        .registerdash{  
+                width: 502px;  
+                overflow: hidden;  
+                margin: auto;  
+                margin: 20 0 0 450px;  
+                padding: 80px;  
+                background: white;  
+                border-radius: 15px;  
+        }  
+        h2{  
+            text-align: center;  
+            color: white;  
+        }  
+        label{  
+            color: black;  
+            font-size: 17px;  
+        }  
+        span{  
+            color: white;  
+            font-size: 17px;  
+        }  
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+          }
+        input[type=submit] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+</style> 
+
+{% include "footer.html"%}
