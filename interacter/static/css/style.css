@@ -78,22 +78,7 @@ body{
       font-family: 'Lato', sans-serif;
       /*border-radius: 8px;*/
     }
-    .footer {
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      background: #ADA996;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      color: black;
-      text-align: center;
-      font-family: 'Lato', sans-serif;
-      padding: 3px;
-   }
-  
-  
-  
+
   
   
    /* Note: This CSS will style all instances of 
@@ -130,6 +115,8 @@ body{
     cursor: pointer;
     border-radius: 8px;
   }
+
+  
 
   /* Headerrrrrrrr */
 
