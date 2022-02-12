@@ -44,3 +44,398 @@
                         </form><span class="navbar-text"><a href="#" class="login">Log In</a></span><a class="btn btn-light action-button" role="button" href="#">Sign Up</a></div>
                 </div>
             </nav>
+
+
+    <style>
+        #aboutus{
+            text-align: center;
+            padding: 40px;
+            flex-wrap: wrap;
+          }
+          #sectionsplit{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            justify-content: space-around;
+          
+          }
+          #sectionsplit1{
+            /* text-align: center; */
+            padding: 40px;
+            background-color: #208f8f;
+            flex:50%;
+          }
+          #sectionsplit1 h1{
+            text-align: center;
+            padding-bottom: 20px;
+          }
+          
+          #sectionsplit2{
+            text-align: center;
+            padding: 40px;
+            background-color:#282d32;
+            color: white;
+            flex:50%;
+          }
+          
+          #sectionsplit2 h1{
+            text-align: center;
+            padding-bottom: 20px;
+          }
+          
+          
+          
+          
+              input[type=button], input[type=submit], input[type=reset] {
+                background-color: lavenderblush;
+                border: none;
+                color: black;
+                padding: 16px 32px;
+                text-decoration: none;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 8px;
+              }
+              input[type=text], input[type=password] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: none;
+                border-bottom: 1.5px solid black;
+                box-sizing: border-box;
+                font-family: 'Lato', sans-serif;
+                /*border-radius: 8px;*/
+              }
+              
+              input[type=text]:focus{
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: none;
+                border-bottom: 1.5px solid black;
+                box-sizing: border-box;
+                outline: 3px solid transparent;
+                font-family: 'Lato', sans-serif;
+                /*border-radius: 8px;*/
+              }
+              .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background: #ADA996;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                color: black;
+                text-align: center;
+                font-family: 'Lato', sans-serif;
+                padding: 3px;
+             }
+            
+            
+            
+            
+            
+             /* Note: This CSS will style all instances of 
+               <input type=file /> controls in your website. */
+            input[type="file"],
+            input[type="file"]:visited,
+            input[type="file"]:hover,
+            input[type="file"]:focus,
+            input[type="file"]:active {
+                margin:0;
+                padding: 0em 0em;
+                padding: 0rem 0rem;
+                overflow: hidden; /* long file names overflow so just hide the end */
+                background: #ffffff;
+                border-radius: .2em;
+                border-radius: .2rem;
+                outline: none;
+                border: 2px solid #bbb;
+                cursor: pointer;
+                -webkit-appearance: textfield;
+                -moz-appearance: textfield;
+            }
+            
+            #datainput{
+              padding: 30px;
+            }
+            button {
+              background-color: lavenderblush;
+              border: none;
+              color: black;
+              padding: 16px 32px;
+              text-decoration: none;
+              margin: 4px 2px;
+              cursor: pointer;
+              border-radius: 8px;
+            }
+          
+            /* Headerrrrrrrr */
+          
+          
+            .header-dark {
+              background:url('https://images.unsplash.com/photo-1635070041409-e63e783ce3c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60') #282d32;
+              background-size:cover;
+              padding-bottom:80px;
+              }
+          
+              @media (min-width:768px) {
+              .header-dark {
+                  padding-bottom:120px;
+              }
+              }
+          
+              .header-dark .navbar {
+              background:transparent;
+              padding-top:0;
+              padding-bottom:0;
+              color:#fff;
+              border-radius:0;
+              box-shadow:none;
+              border:none;
+              }
+          
+              @media (min-width:768px) {
+              .header-dark .navbar {
+                  padding-top:.75rem;
+                  padding-bottom:.75rem;
+              }
+              }
+          
+              .header-dark .navbar .navbar-brand {
+              font-weight:bold;
+              color:inherit;
+              }
+          
+              .header-dark .navbar .navbar-brand:hover {
+              color:#f0f0f0;
+              }
+          
+              .header-dark .navbar .navbar-collapse span {
+              margin-top:5px;
+              }
+          
+              .header-dark .navbar .navbar-collapse span .login {
+              color:#d9d9d9;
+              margin-right:.5rem;
+              text-decoration:none;
+              }
+          
+              .header-dark .navbar .navbar-collapse span .login:hover {
+              color:#fff;
+              }
+          
+              .header-dark .navbar .navbar-toggler {
+              border-color:#747474;
+              }
+          
+              .header-dark .navbar .navbar-toggler:hover, .header-dark .navbar-toggler:focus {
+              background:none;
+              }
+          
+              .header-dark .navbar .navbar-toggler {
+              color:#eee;
+              }
+          
+              .header-dark .navbar .navbar-collapse, .header-dark .navbar .form-inline {
+              border-color:#636363;
+              }
+          
+              @media (min-width: 992px) {
+              .header-dark .navbar.navbar .navbar-nav .nav-link {
+                  padding-left:1.2rem;
+                  padding-right:1.2rem;
+              }
+              }
+          
+              .header-dark .navbar.navbar-dark .navbar-nav .nav-link {
+              color:#d9d9d9;
+              }
+          
+              .header-dark .navbar.navbar-dark .navbar-nav .nav-link:focus, .header-dark .navbar.navbar-dark .navbar-nav .nav-link:hover {
+              color:#fcfeff !important;
+              background-color:transparent;
+              }
+          
+              .header-dark .navbar .navbar-nav > li > .dropdown-menu {
+              margin-top:-5px;
+              box-shadow:0 4px 8px rgba(0,0,0,.1);
+              background-color:#fff;
+              border-radius:2px;
+              }
+          
+              .header-dark .navbar .dropdown-menu .dropdown-item:focus, .header-dark .navbar .dropdown-menu .dropdown-item {
+              line-height:2;
+              font-size:14px;
+              color:#37434d;
+              }
+          
+              .header-dark .navbar .dropdown-menu .dropdown-item:focus, .header-dark .navbar .dropdown-menu .drodown-item:hover {
+              background:#ebeff1;
+              }
+          
+              .header-dark .navbar .action-button, .header-dark .navbar .action-button:active {
+              background:#208f8f;
+              border-radius:20px;
+              font-size:inherit;
+              color:#fff;
+              box-shadow:none;
+              border:none;
+              text-shadow:none;
+              padding:.5rem .8rem;
+              transition:background-color 0.25s;
+              }
+          
+              .header-dark .navbar .action-button:hover {
+              background:#269d9d;
+              }
+          
+              .header-dark .navbar .form-inline label {
+              color:#ccc;
+              }
+          
+              .header-dark .navbar .form-inline .search-field {
+              display:inline-block;
+              width:80%;
+              background:none;
+              border:none;
+              border-bottom:1px solid transparent;
+              border-radius:0;
+              color:#ccc;
+              box-shadow:none;
+              color:inherit;
+              transition:border-bottom-color 0.3s;
+              }
+          
+              .header-dark .navbar .form-inline .search-field:focus {
+              border-bottom:1px solid #ccc;
+              }
+          
+              .header-dark .hero {
+              margin-top:60px;
+              }
+          
+              @media (min-width:768px) {
+              .header-dark .hero {
+                  margin-top:20px;
+              }
+              }
+          
+              .header-dark .hero h1 {
+              color:#fff;
+              font-family:'Bitter', serif;
+              font-size:40px;
+              margin-top:20px;
+              margin-bottom:80px;
+              }
+          
+              @media (min-width:768px) {
+              .header-dark .hero h1 {
+                  margin-bottom:50px;
+                  line-height:1.5;
+              }
+              }
+          
+              .header-dark .hero .embed-responsive iframe {
+              background-color:#666;
+              }
+          
+          
+          
+          
+          
+          
+              .footer-dark {
+                padding:50px 0;
+                color:#f0f9ff;
+                background-color:#282d32;
+              }
+              
+              .footer-dark h3 {
+                margin-top:0;
+                margin-bottom:12px;
+                font-weight:bold;
+                font-size:16px;
+              }
+              
+              .footer-dark ul {
+                padding:0;
+                list-style:none;
+                line-height:1.6;
+                font-size:14px;
+                margin-bottom:0;
+              }
+              
+              .footer-dark ul a {
+                color:inherit;
+                text-decoration:none;
+                opacity:0.6;
+              }
+              
+              .footer-dark ul a:hover {
+                opacity:0.8;
+              }
+              
+              @media (max-width:767px) {
+                .footer-dark .item:not(.social) {
+                  text-align:center;
+                  padding-bottom:20px;
+                }
+              }
+              
+              .footer-dark .item.text {
+                margin-bottom:36px;
+              }
+              
+              @media (max-width:767px) {
+                .footer-dark .item.text {
+                  margin-bottom:0;
+                }
+              }
+              
+              .footer-dark .item.text p {
+                opacity:0.6;
+                margin-bottom:0;
+              }
+              
+              .footer-dark .item.social {
+                text-align:center;
+              }
+              
+              @media (max-width:991px) {
+                .footer-dark .item.social {
+                  text-align:center;
+                  margin-top:20px;
+                }
+              }
+              
+              .footer-dark .item.social > a {
+                font-size:20px;
+                width:36px;
+                height:36px;
+                line-height:36px;
+                display:inline-block;
+                text-align:center;
+                border-radius:50%;
+                box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+                margin:0 8px;
+                color:#fff;
+                opacity:0.75;
+              }
+              
+              .footer-dark .item.social > a:hover {
+                opacity:0.9;
+              }
+              
+              .footer-dark .copyright {
+                text-align:center;
+                padding-top:24px;
+                opacity:0.3;
+                font-size:13px;
+                margin-bottom:0;
+              }
+              
+    </style>
