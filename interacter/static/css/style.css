@@ -1,3 +1,10 @@
+body{
+  font-family: 'Lato', sans-serif;
+}
+#contentcenter{
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
 #aboutus{
   text-align: center;
   padding: 40px;
