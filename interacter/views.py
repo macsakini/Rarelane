@@ -11,6 +11,12 @@ from django.conf import settings
 from decimal import Decimal
 from paypal.standard.forms import PayPalPaymentsForm
 
+import telebot
+from telethon.sync import TelegramClient
+from telethon.tl.types import InputPeerUser, InputPeerChannel
+from telethon import TelegramClient, sync, events
+
+import asyncio
 
 def index(request):
     
@@ -32,17 +38,45 @@ def booking(request):
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
         form = BookingForm(request.POST)
-        # check whether it's valid:
-        if form.is_valid():
-            
+        
+        #start telegram loop
+        loop = asyncio.new_event_loop()
+        
+        asyncio.set_event_loop(loop)
+    
+        
+        if form.is_valid():     
             form.save()
-            
+            message = "Client " + form.cleaned_data.get('email_address') + " made a booking of session length " + form.cleaned_data.get('session_length') + "hrs. Phone number is " + form.cleaned_data.get('phone_number')
+            response = loop.run_until_complete(
+                telegram(message)
+            )
             return HttpResponseRedirect('booked')
+        
+        loop.close()
     else:
         form = BookingForm()       
         
     return render(request, 'booking.html', {'form': form})
     
+async def telegram(text):
+    #Telegram Code
+    client = TelegramClient('session', settings.API_ID, settings.API_HASH)
+
+    await client.connect()
+    
+    if not await client.is_user_authorized():
+        await client.send_code_request(settings.PHONE)
+        await client.sign_in(settings.PHONE, input('Enter the code: '))
+    try:
+        me = await client.get_me()
+        receiver = InputPeerUser(me.id, me.access_hash)
+        await client.send_message(receiver, text, parse_mode='html')
+    except Exception as e:
+        print(e);
+    await client.disconnect()
+    
+     
 def booked(request):
     return render(request, 'booked.html')
     

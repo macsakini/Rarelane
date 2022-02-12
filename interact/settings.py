@@ -149,3 +149,16 @@ LOGIN_REDIRECT_URL = '/index'
 PAYPAL_RECEIVER_EMAIL = 'sb-4fvdh13507647@business.example.com'
 
 PAYPAL_TEST = True
+
+# get your api_id, api_hash, token
+# from telegram as described above
+API_ID = '11936463'
+
+API_HASH = 'f1d868ab51ae41966d50d00a2ffc3080'
+
+BOT_TOKEN = '5280454736:AAHCmbNy_LUYBSO27E9_PW3ehDiLv8ierqQ'
+
+os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
+
+# your phone number
+PHONE = "+254720364510"

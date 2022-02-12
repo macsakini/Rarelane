@@ -4,8 +4,13 @@ body{
 #contentcenter{
   text-align: center;
   font-family: 'Lato', sans-serif;
+  margin: 80px;
+  font-weight: bolder;
 }
+
 #aboutus{
+  margin-top: 20px;
+  margin-bottom: 20px;
   text-align: center;
   padding: 40px;
   flex-wrap: wrap;
