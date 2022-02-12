@@ -71,7 +71,6 @@ def videoupload(request):
     
     return render(request, 'videoupload.html', {'form':form})
 
-@login_required
 def booking(request):
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
