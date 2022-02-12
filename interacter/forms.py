@@ -1,5 +1,5 @@
 from django import forms
-from .models import Document
+from .models import Document, BookingModel
 
 
 class UserForm(forms.Form):
@@ -29,9 +29,8 @@ SESSION_CHOICES = (
     ('3', '3hr Session'),
     ('4', '4hr Session')
 )
-class BookingForm(forms.Form):
-    session_length = forms.ChoiceField(label = 'Session Length', choices = SESSION_CHOICES)
-    email_address = forms.CharField(label='Email address', max_length=100)
-    phone_number = forms.CharField(label = 'Telephone Number', required=False)
-    date_time = forms.DateTimeField(label = "Set Start Time of Session", required=False)
-    
+
+class BookingForm(forms.ModelForm):
+    class Meta:
+        model = BookingModel
+        fields = ['session_length', 'email_address', 'phone_number', 'date_time']

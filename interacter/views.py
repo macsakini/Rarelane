@@ -15,13 +15,17 @@ from paypal.standard.forms import PayPalPaymentsForm
 def index(request):
     
     if request.method == 'POST':
-        # create a form instance and populate it with data from the request:
+        
         form = BookingForm(request.POST)
-        # check whether it's valid:
+
         if form.is_valid():
-            pass
+            
+            form.save()
+            
+            return HttpResponseRedirect('booked')
     else:
         form = BookingForm()
+        
     return render(request, 'index.html', {'form':form})
 
 def booking(request):
@@ -30,10 +34,12 @@ def booking(request):
         form = BookingForm(request.POST)
         # check whether it's valid:
         if form.is_valid():
-            pass
+            
+            form.save()
+            
+            return HttpResponseRedirect('booked')
     else:
-        form = BookingForm()
-        
+        form = BookingForm()       
         
     return render(request, 'booking.html', {'form': form})
     

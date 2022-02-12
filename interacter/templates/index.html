@@ -28,7 +28,7 @@
                 <h1>Book your Appointment</h1>
             </div>
             <div class="registerdash">    
-                <form id="login" method="POST" action="/login">    
+                <form id="login" method="POST" action="/booking">    
                     {% csrf_token %}
                     {{ form.as_p }}
                     <input type="submit" value="Submit">
