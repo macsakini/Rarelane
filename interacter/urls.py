@@ -13,6 +13,8 @@ urlpatterns = [
     
     path('booking', views.booking, name='booking'), 
     
+    path('booked', views.booked, name='booked'), 
+    
     path('logout', views.logout_view, name='logout'),
     
     path('register', views.register, name='register'),
