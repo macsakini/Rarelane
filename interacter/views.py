@@ -59,18 +59,6 @@ def index(request):
         form = BookingForm()
     return render(request, 'index.html', {'form':form})
 
-@login_required
-def videoupload(request):
-    if request.method == 'POST':
-        form = DocumentForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect('/')
-    else:
-        form = DocumentForm()
-    
-    return render(request, 'videoupload.html', {'form':form})
-
 def booking(request):
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
@@ -83,6 +71,9 @@ def booking(request):
         
         
     return render(request, 'booking.html', {'form': form})
+    
+def booked(request):
+    return render(request, 'booked.html')
     
 
 @csrf_exempt
@@ -181,3 +172,15 @@ def forgotpassword(request):
     
     return render(request, 'registration/forgotpassword.html', {'form': form})
     
+
+@login_required
+def videoupload(request):
+    if request.method == 'POST':
+        form = DocumentForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/')
+    else:
+        form = DocumentForm()
+    
+    return render(request, 'videoupload.html', {'form':form})
