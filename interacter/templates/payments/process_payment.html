@@ -7,8 +7,12 @@
 
 <div id = "contentcenter">
     <h4>Pay with PayPal</h4>
+    <form id="login" method="POST" action="/login">    
+        {% csrf_token %}
+        <input type = "text" name = "amount" placeholder = "Price Information"/>
+    </form>
+    <br>
     {{ form.render }}
-
 </div>
 
 
