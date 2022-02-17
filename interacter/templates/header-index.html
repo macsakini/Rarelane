@@ -126,8 +126,17 @@
 </script>
 
 <style>
+  /* Global Styles */
+
   body{
     /* font-family: 'Lato', sans-serif; */
+  }
+  
+  h2{
+    text-align: center;
+    color: white;
+    padding-top: 40px;
+    font-size: 150%;
   }
   #contentcenter{
     text-align: center;
@@ -174,88 +183,94 @@
     padding-bottom: 20px;
   }
   
+  .registerdash{
+    margin: 10%;
+    margin-top: 40px;
+  }
+  
+  
+  /* Forms in the site*/
+  
+  input[type=button], input[type=submit], input[type=reset] {
+    background-color: lavenderblush;
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    border-bottom: 1.5px solid black;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    /*border-radius: 8px;*/
+  }
+  
+  input[type=text]:focus{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    border-bottom: 1.5px solid black;
+    box-sizing: border-box;
+    outline: 3px solid transparent;
+    font-family: 'Lato', sans-serif;
+    /*border-radius: 8px;*/
+  }
   
   
   
-      input[type=button], input[type=submit], input[type=reset] {
-        background-color: lavenderblush;
-        border: none;
-        color: black;
-        padding: 16px 32px;
-        text-decoration: none;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 8px;
-      }
-      input[type=text], input[type=password] {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: none;
-        border-bottom: 1.5px solid black;
-        box-sizing: border-box;
-        font-family: 'Lato', sans-serif;
-        /*border-radius: 8px;*/
-      }
-      
-      input[type=text]:focus{
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: none;
-        border-bottom: 1.5px solid black;
-        box-sizing: border-box;
-        outline: 3px solid transparent;
-        font-family: 'Lato', sans-serif;
-        /*border-radius: 8px;*/
-      }
+  /* Note: This CSS will style all instances of 
+    <input type=file /> controls in your website. */
+  input[type="file"],
+  input[type="file"]:visited,
+  input[type="file"]:hover,
+  input[type="file"]:focus,
+  input[type="file"]:active {
+    margin:0;
+    padding: 0em 0em;
+    padding: 0rem 0rem;
+    overflow: hidden; /* long file names overflow so just hide the end */
+    background: #ffffff;
+    border-radius: .2em;
+    border-radius: .2rem;
+    outline: none;
+    border: 2px solid #bbb;
+    cursor: pointer;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+  }
   
-    
-    
-     /* Note: This CSS will style all instances of 
-       <input type=file /> controls in your website. */
-    input[type="file"],
-    input[type="file"]:visited,
-    input[type="file"]:hover,
-    input[type="file"]:focus,
-    input[type="file"]:active {
-        margin:0;
-        padding: 0em 0em;
-        padding: 0rem 0rem;
-        overflow: hidden; /* long file names overflow so just hide the end */
-        background: #ffffff;
-        border-radius: .2em;
-        border-radius: .2rem;
-        outline: none;
-        border: 2px solid #bbb;
-        cursor: pointer;
-        -webkit-appearance: textfield;
-        -moz-appearance: textfield;
-    }
-    
-    #datainput{
-      padding: 30px;
-    }
-    button {
-      background-color: lavenderblush;
-      border: none;
-      color: black;
-      padding: 16px 32px;
-      text-decoration: none;
-      margin: 4px 2px;
-      cursor: pointer;
-      border-radius: 8px;
-    }
+  #datainput{
+  padding: 30px;
+  }
+  button {
+  background-color: lavenderblush;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  }
   
-    
+  
   
     /* Headerrrrrrrr */
   
     .header-dark {
       background-color: #282d32;
       background-size:cover;
+      padding-bottom: 50px;
     }
     
     @media (min-width:768px) {
@@ -667,6 +682,7 @@
         font-size:13px;
         margin-bottom:0;
       }
+      
       
 </style>
 
